@@ -1,27 +1,27 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import Image from "next/image";
 import { BiArrowFromLeft, BiUser, BiMenu } from "react-icons/bi";
 
-import Logo from "../../assets/logo.svg";
+import Logo from "@/assets/logo.svg";
 
-export default function Header({ nameProps }: { nameProps: string }) {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const router = useRouter();
+  const router = useRouter()
 
   const handleLogout = () => {
     sessionStorage.clear();
     router.push("/login");
   };
-  const endpointsHome = [
-    {caminho:"/home", nome: 'Home'},
-    {caminho:"/about", nome: 'Sobre nós'},
-    {caminho:"/chat/oficinas", nome: 'Oficinas'},
-    
 
-]
+  const endpointsHome = [
+    { caminho: "/", nome: "Home" },
+    { caminho: "/about", nome: "Sobre nós" },
+    { caminho: "/chat/oficinas", nome: "Oficinas" },
+  ];
 
   return (
     <header className="p-4 bg-[#00163e] flex justify-between items-center relative">
@@ -62,7 +62,7 @@ export default function Header({ nameProps }: { nameProps: string }) {
 
         {isUserMenuOpen && (
           <div className="z-50 absolute right-0 mt-2 w-48 bg-white text-black rounded shadow-lg">
-            <div className="p-4 border-b border-gray-200">{nameProps}</div>
+            <div className="p-4 border-b border-gray-200">Configurações</div>
             <button
               className="w-full text-left p-4 hover:bg-gray-200"
               onClick={handleLogout}

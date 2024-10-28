@@ -9,12 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'azul': "#1C00FF",
-        'amarelo': "#F1B82D",
-        'azulEscuro': "#002D7F",
+        azul: "#1C00FF",
+        amarelo: "#F1B82D",
+        azulEscuro: "#00163e",
+      },
+      fontFamily: {
+        oswald: ["Oswald", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

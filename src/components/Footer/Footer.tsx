@@ -28,8 +28,8 @@ export default function Footer() {
             <h3 className="font-bold mb-2">Social</h3>
             <ul>
               <li><Link href="#" className="hover:underline">Gmail</Link></li>
-              <li><Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="hover:underline">Youtube</Link></li>
-              <li><Link href="https://github.com/lemos000" className="hover:underline">GitHub</Link></li>
+              <li><Link href="#" className="hover:underline">Youtube</Link></li>
+              <li><Link href="#" className="hover:underline">GitHub</Link></li>
             </ul>
           </div>
         </div>
